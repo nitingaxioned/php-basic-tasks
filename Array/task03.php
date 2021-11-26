@@ -1,5 +1,4 @@
 <?php
-
     #Write a PHP script which decodes the following JSON string.
    
     $json_str = '{"Title": "The Cuckoos Calling",
@@ -9,5 +8,6 @@
         }}';
 
     $json_arr = json_decode($json_str, true);
+    array_walk_recursive($json_arr, function($key, $val){ echo "$key : $val<br>"; });
 
 ?>
